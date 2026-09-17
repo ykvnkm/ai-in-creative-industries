@@ -1,0 +1,34 @@
+{
+  "checked_utc": "2026-09-17T22:29:38.149148+00:00",
+  "variant": 11,
+  "runs": [
+    "run_001",
+    "run_002"
+  ],
+  "sha256": {
+    "run_001": "1f14ca3a96390159968da9c05e7409b5f3a8d9c429715febaf0904eadf02bef6",
+    "run_002": "1f14ca3a96390159968da9c05e7409b5f3a8d9c429715febaf0904eadf02bef6"
+  },
+  "image_size_observed": {
+    "run_001": [
+      512,
+      512
+    ],
+    "run_002": [
+      512,
+      512
+    ]
+  },
+  "image_mode_observed": {
+    "run_001": "RGB",
+    "run_002": "RGB"
+  },
+  "generation_seconds_measured": {
+    "run_001": 20.187987667013658,
+    "run_002": 15.834091166994767
+  },
+  "exact_sha256_match": true,
+  "same_image_size": true,
+  "same_image_mode": true,
+  "interpretation": "PASS: запуски в одной зафиксированной среде совпали побитово."
+}
