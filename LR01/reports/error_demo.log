@@ -1,44 +1,0 @@
-/Users/ykvnkm/Documents/GitHub/ai-in-creative-industries/LR01/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
-  warnings.warn(
-[transformers] `Siglip2ImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Siglip2ImageProcessor` instead.
-/Users/ykvnkm/Documents/GitHub/ai-in-creative-industries/LR01/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:208: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
-  warnings.warn(
-/Users/ykvnkm/Documents/GitHub/ai-in-creative-industries/LR01/.venv/lib/python3.12/site-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
-  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
-Couldn't connect to the Hub: Cannot reach https://huggingface.co/api/models/stabilityai/sd-turbo/revision/b261bac6fd2cf515557d5d0707481eafa0485ec2: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable..
-Will try to load from local cache.
-# Воспроизведение намеренной ошибки, UTC: 2026-09-17T22:29:41.478928+00:00
-# Изменение: torch.Generator(device='cuda') вместо device='cpu'
----
-Создан каталог запуска: artifacts/error_demo_incomplete
-Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]
-Loading weights:   0%|          | 0/372 [00:00<?, ?it/s][ALoading weights: 100%|██████████| 372/372 [00:00<00:00, 9809.33it/s]
-Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00, 28.64it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00, 28.63it/s]
-You have disabled the safety checker for <class 'diffusers.pipelines.stable_diffusion.pipeline_stable_diffusion.StableDiffusionPipeline'> by passing `safety_checker=None`. Ensure that you abide to the conditions of the Stable Diffusion license and do not expose unfiltered results in services or applications open to the public. Both the diffusers team and Hugging Face strongly recommend to keep the safety filter enabled in all public facing circumstances, disabling it only for use-cases that involve analyzing network behavior or auditing its results. For more information, please have a look at https://github.com/huggingface/diffusers/pull/254 .
-Traceback (most recent call last):
-  File "/Users/ykvnkm/Documents/GitHub/ai-in-creative-industries/LR01/src/error_demo_cuda_generator.py", line 56, in main
-    generator = torch.Generator(device="cuda").manual_seed(int(config["seed"]))
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-RuntimeError: Cannot get CUDA generator without ATen_cuda library. PyTorch splits its backend into two shared libraries: a CPU library and a CUDA library; this error has occurred because you are trying to use some CUDA functionality, but the CUDA library has not been loaded by the dynamic linker for some reason.  The CUDA library MUST be loaded, EVEN IF you don't directly use any symbols from the CUDA library! One common culprit is a lack of -Wl,--no-as-needed in your link arguments; many dynamic linkers will delete dynamic library dependencies if you don't depend on any of their symbols.  You can check if this has occurred by using ldd on your binary to see if there is a dependency on *_cuda.so library.
-Pipeline загружен на устройство: cpu
-
-=== СИМПТОМ ===
-RuntimeError: Cannot get CUDA generator without ATen_cuda library. PyTorch splits its backend into two shared libraries: a CPU library and a CUDA library; this error has occurred because you are trying to use some CUDA functionality, but the CUDA library has not been loaded by the dynamic linker for some reason.  The CUDA library MUST be loaded, EVEN IF you don't directly use any symbols from the CUDA library! One common culprit is a lack of -Wl,--no-as-needed in your link arguments; many dynamic linkers will delete dynamic library dependencies if you don't depend on any of their symbols.  You can check if this has occurred by using ldd on your binary to see if there is a dependency on *_cuda.so library.
-
-=== ПОЛНАЯ ТРАССИРОВКА ===
-
-=== ДИАГНОСТИКА ===
-torch.__version__              = 2.14.0
-torch.cuda.is_available()      = False
-torch.backends.mps.is_available() = True
-устройство pipeline            = cpu
-устройство генератора в коде    = 'cuda' (жёстко задано)
-Вывод: несовместимость устройства генератора и фактической среды.
-
-=== ИСПРАВЛЕНИЕ ===
-Создать CPU Generator, как в эталонном src/generate_once.py:
-    generator = torch.Generator(device='cpu').manual_seed(SEED)
-либо выбирать устройство только после torch.cuda.is_available().
-
-=== ОЧИСТКА ===
-Неполный каталог artifacts/error_demo_incomplete удалён.

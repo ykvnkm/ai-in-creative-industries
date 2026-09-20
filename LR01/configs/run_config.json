@@ -1,8 +1,6 @@
 {
-  "course": "Искусственный интеллект в креативных технологиях",
-  "lab": "ЛР №1. Запуск открытой модели text-to-image",
   "variant": 11,
-  "variant_context": "Иллюстрация для материала о кибербезопасности",
+  "variant_context": "иллюстрация для материала о кибербезопасности",
   "variant_factor": "метафора защиты без интерфейсных клише",
   "model_id": "stabilityai/sd-turbo",
   "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
@@ -11,8 +9,5 @@
   "num_inference_steps": 4,
   "guidance_scale": 0.0,
   "height": 512,
-  "width": 512,
-  "torch_num_threads": 1,
-  "deterministic_algorithms": true,
-  "runs": ["run_001", "run_002"]
+  "width": 512
 }
