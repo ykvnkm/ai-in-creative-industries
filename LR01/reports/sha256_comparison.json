@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-09-20T07:12:13.913012+00:00",
+  "checked_utc": "2026-09-20T07:15:48.687807+00:00",
   "device": "cpu",
   "dtype": "torch.float32",
   "platform": "macOS-26.6.2-arm64-arm-64bit",
@@ -7,8 +7,8 @@
   "run_002_sha256": "1f14ca3a96390159968da9c05e7409b5f3a8d9c429715febaf0904eadf02bef6",
   "exact_sha256_match": true,
   "generation_seconds": {
-    "run_001": 16.50285275001079,
-    "run_002": 17.630056333029643
+    "run_001": 20.73052491695853,
+    "run_002": 17.61594404198695
   },
   "interpretation": "PASS: два запуска в этой зафиксированной среде совпали побитово."
 }

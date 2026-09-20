@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-09-20T07:11:56.238203+00:00",
+  "created_utc": "2026-09-20T07:15:31.023280+00:00",
   "variant": 11,
   "model_id": "stabilityai/sd-turbo",
   "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
@@ -23,7 +23,7 @@
     "accelerate": "1.15.0",
     "safetensors": "0.8.0"
   },
-  "generation_seconds_measured": 16.50285275001079,
+  "generation_seconds_measured": 20.73052491695853,
   "artifact": "artifacts/run_001/result.png",
   "artifact_size_bytes": 574124,
   "image_size_observed": [
