@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-09-23T14:17:26.484938+00:00",
+  "created_utc": "2026-09-23T07:34:59.427274+00:00",
   "variant": 11,
   "model_id": "stabilityai/sd-turbo",
   "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
@@ -10,26 +10,26 @@
   "height": 512,
   "width": 512,
   "run_name": "run_002",
-  "device": "cuda",
-  "dtype": "torch.float16",
+  "device": "cpu",
+  "dtype": "torch.float32",
   "torch_num_threads": 1,
   "deterministic_algorithms": true,
-  "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
-  "python": "3.13.15",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.12.8",
   "packages": {
-    "torch": "2.11.0+cu128",
+    "torch": "2.14.0",
     "diffusers": "0.40.0",
-    "transformers": "5.16.1",
-    "accelerate": "1.14.0",
+    "transformers": "5.17.0",
+    "accelerate": "1.15.0",
     "safetensors": "0.8.0"
   },
-  "generation_seconds_measured": 2.025863307999998,
+  "generation_seconds_measured": 51.00231775001157,
   "artifact": "artifacts/run_002/result.png",
-  "artifact_size_bytes": 515305,
+  "artifact_size_bytes": 574124,
   "image_size_observed": [
     512,
     512
   ],
   "image_mode_observed": "RGB",
-  "sha256": "89f50ecc77e0f36e197e9b20f6f78310a01237e4a169dd807812026ec1081870"
+  "sha256": "1f14ca3a96390159968da9c05e7409b5f3a8d9c429715febaf0904eadf02bef6"
 }

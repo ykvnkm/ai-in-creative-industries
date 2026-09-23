@@ -1,0 +1,13 @@
+{
+  "variant": 11,
+  "variant_context": "иллюстрация для материала о кибербезопасности",
+  "variant_factor": "метафора защиты без интерфейсных клише",
+  "model_id": "stabilityai/sd-turbo",
+  "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+  "prompt": "abstract editorial illustration of layered protection, a smooth matte stone core enclosed by several concentric translucent glass shells, neutral seamless studio backdrop, deep teal and pale sand palette, centered symmetrical composition with wide empty margins, soft diffused light, no text, no logo, no people, no padlock, no shield emblem, no binary code, no user interface",
+  "seed": 20260911,
+  "num_inference_steps": 4,
+  "guidance_scale": 0.0,
+  "height": 512,
+  "width": 512
+}

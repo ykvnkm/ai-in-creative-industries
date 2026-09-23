@@ -1,14 +1,14 @@
 {
-  "checked_utc": "2026-09-20T07:15:48.687807+00:00",
-  "device": "cpu",
-  "dtype": "torch.float32",
-  "platform": "macOS-26.6.2-arm64-arm-64bit",
-  "run_001_sha256": "1f14ca3a96390159968da9c05e7409b5f3a8d9c429715febaf0904eadf02bef6",
-  "run_002_sha256": "1f14ca3a96390159968da9c05e7409b5f3a8d9c429715febaf0904eadf02bef6",
+  "checked_utc": "2026-09-23T14:17:26.554543+00:00",
+  "device": "cuda",
+  "dtype": "torch.float16",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+  "run_001_sha256": "89f50ecc77e0f36e197e9b20f6f78310a01237e4a169dd807812026ec1081870",
+  "run_002_sha256": "89f50ecc77e0f36e197e9b20f6f78310a01237e4a169dd807812026ec1081870",
   "exact_sha256_match": true,
   "generation_seconds": {
-    "run_001": 20.73052491695853,
-    "run_002": 17.61594404198695
+    "run_001": 2.4860849140000028,
+    "run_002": 2.025863307999998
   },
   "interpretation": "PASS: два запуска в этой зафиксированной среде совпали побитово."
 }
