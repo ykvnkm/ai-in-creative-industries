@@ -7,24 +7,30 @@
 
 ## Работы
 
-| № | Тема | Вариант | Ноутбук | Результат |
+| № | Тема | Вариант | Ноутбук | Статус |
 | --- | --- | --- | --- | --- |
-| 01 | Запуск открытой модели text-to-image | 11 — иллюстрация о кибербезопасности | [LR01.ipynb](LR01/LR01.ipynb) | две среды, внутри каждой SHA-256 совпали |
+| 01 | Подготовка среды и паспорт воспроизводимого эксперимента | 2 — облачное небо × число октав +1 | — | [не начата](LR01) |
+| 05 | Запуск открытой модели text-to-image | 11 — иллюстрация о кибербезопасности | [ноутбук](LR05/Яковенко_Максим_Михайлович_Вариант_11_ЛР_5.ipynb) | выполнена: две среды, внутри каждой SHA-256 совпали |
+
+Вариант **2** во всех работах, кроме ЛР №5: она была выполнена до пересмотра плана
+курса, когда назначенным вариантом был 11.
 
 ## Как это устроено
 
 ```
 LR0N/
-├── LR0N.ipynb         код + сохранённые выходы + отчёт
-├── LR0N_report.pdf    тот же отчёт в PDF, со всеми выходами
+├── Яковенко_Максим_Михайлович_Вариант_V_ЛР_N.ipynb   код + выходы + отчёт
+├── Яковенко_Максим_Михайлович_Вариант_V_ЛР_N.pdf     тот же отчёт в PDF
 ├── README.md          что это и как повторить
-├── assignment/        методические указания
+├── assignment/        методические указания и выданные материалы
+├── src/               код, если работа его требует отдельно от ноутбука
 ├── configs/           параметры запуска одним файлом
 ├── artifacts/         результаты: файл + manifest.json рядом
-└── reports/           environment.txt и сравнения
+└── reports/           environment.txt, паспорта, сравнения
 ```
 
-Каталоги `configs/`, `artifacts/` и `reports/` создаёт сам ноутбук при выполнении.
+Где `V` — номер варианта, `N` — номер работы. Каталоги `configs/`, `artifacts/`
+и `reports/` создаёт сам ноутбук при выполнении.
 
 **Правила для всех работ:**
 
@@ -41,19 +47,24 @@ LR0N/
 
 Фактически использованная площадка (Hugging Face, Ollama, OpenCLAW и т.д) указывается в ноутбуке каждой работы.
 
-## Лицензии
+## Лицензия
 
-Код учебный. Веса моделей распространяются на условиях своих лицензий, они
-указаны в соответствующей работе. Сгенерированные изображения — учебные
-концепты, они не документируют реальные объекты и события.
+Код в репозитории распространяется по лицензии MIT, см. [LICENSE](LICENSE).
+
+Лицензия относится только к моему коду. Методические указания и выданные
+преподавателем материалы в каталогах `assignment/` под неё не подпадают. Веса
+моделей распространяются на условиях своих лицензий, они указаны в
+соответствующей работе. Сгенерированные изображения — учебные концепты, они не
+документируют реальные объекты и события.
 
 ## Сдача работы
 
 **PDF-версия отчёта** — страховка на случай, если ноутбук не откроется у проверяющего:
 
 ```bash
-LR0N/.venv/bin/python -m nbconvert --to html --embed-images --output-dir /tmp --output report LR0N/LR0N.ipynb
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer --print-to-pdf=LR0N/LR0N_report.pdf file:///tmp/report.html
+NB="Яковенко_Максим_Михайлович_Вариант_V_ЛР_N"
+LR0N/.venv/bin/python -m nbconvert --to html --embed-images --output-dir /tmp --output report "LR0N/$NB.ipynb"
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer --print-to-pdf="LR0N/$NB.pdf" file:///tmp/report.html
 ```
 
 **Архив для загрузки** (без виртуального окружения и кэша весов — они занимают гигабайты
@@ -63,8 +74,8 @@ LR0N/.venv/bin/python -m nbconvert --to html --embed-images --output-dir /tmp --
 python3 -c "
 import zipfile
 from pathlib import Path
-root, skip = Path('ai-in-creative-industries'), {'.venv','cache','.git','__pycache__','.ipynb_checkpoints'}
-with zipfile.ZipFile(Path.home()/'Desktop'/'ai-in-creative-industries.zip','w',zipfile.ZIP_DEFLATED) as z:
+root, skip = Path('LR0N'), {'.venv','cache','.git','__pycache__','.ipynb_checkpoints'}
+with zipfile.ZipFile(Path.home()/'Desktop'/'LR0N.zip','w',zipfile.ZIP_DEFLATED) as z:
     for f in sorted(root.rglob('*')):
         if f.is_file() and not (skip & set(f.parts)) and f.name != '.DS_Store':
             z.write(f, f.as_posix())
