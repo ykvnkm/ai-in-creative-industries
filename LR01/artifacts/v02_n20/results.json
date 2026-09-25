@@ -1,0 +1,163 @@
+{
+  "date": "2026-09-24 15:01:47 UTC",
+  "variant": 2,
+  "context": "clouds",
+  "context_title": "облачное небо (фон афиши)",
+  "factor": "octaves",
+  "factor_title": "число октав +1",
+  "base_seed": 101,
+  "n": 20,
+  "seeds_repro": [
+    101,
+    101,
+    1101,
+    101
+  ],
+  "eq": {
+    "EQ_1_2": true,
+    "EQ_1_4": true,
+    "EQ_1_3": false,
+    "EQ_2_4": true
+  },
+  "eq_png": {
+    "EQ_1_2_png": true
+  },
+  "params_base": {
+    "size": 96,
+    "cell": 32,
+    "octaves": 4,
+    "persistence": 0.5,
+    "quantize": 8,
+    "interp": "smooth"
+  },
+  "params_perturbed": {
+    "size": 96,
+    "cell": 32,
+    "octaves": 5,
+    "persistence": 0.5,
+    "quantize": 8,
+    "interp": "smooth"
+  },
+  "runs_repro": [
+    {
+      "seed": 101,
+      "params": {
+        "size": 96,
+        "cell": 32,
+        "octaves": 4,
+        "persistence": 0.5,
+        "quantize": 8,
+        "interp": "smooth"
+      },
+      "sha256_pixels": "93fae5913d79728429ddcdf533063672739fd51e5afa6a7ac243e3e6a80d290b",
+      "sha256_png": "9779f1fe26d3815c5663d067f4b3454c0be748ce6e64f18bf79366cfb0051b59",
+      "mean": 0.4502076525054466,
+      "contrast": 0.1334127822998053,
+      "edge": 0.010212848297213622,
+      "entropy": 7.040183729460281
+    },
+    {
+      "seed": 101,
+      "params": {
+        "size": 96,
+        "cell": 32,
+        "octaves": 4,
+        "persistence": 0.5,
+        "quantize": 8,
+        "interp": "smooth"
+      },
+      "sha256_pixels": "93fae5913d79728429ddcdf533063672739fd51e5afa6a7ac243e3e6a80d290b",
+      "sha256_png": "9779f1fe26d3815c5663d067f4b3454c0be748ce6e64f18bf79366cfb0051b59",
+      "mean": 0.4502076525054466,
+      "contrast": 0.1334127822998053,
+      "edge": 0.010212848297213622,
+      "entropy": 7.040183729460281
+    },
+    {
+      "seed": 1101,
+      "params": {
+        "size": 96,
+        "cell": 32,
+        "octaves": 4,
+        "persistence": 0.5,
+        "quantize": 8,
+        "interp": "smooth"
+      },
+      "sha256_pixels": "79aa3ff4187bbfe82959dec1a542c82e7143d035dc7641ab0827855fc36d4fd2",
+      "sha256_png": "68cab27fecf9d4a005b90805a6f4a91388660242d13e4290be807586e3b0a407",
+      "mean": 0.48697703907952067,
+      "contrast": 0.11957528475072923,
+      "edge": 0.0105671654626763,
+      "entropy": 6.883510322409739
+    },
+    {
+      "seed": 101,
+      "params": {
+        "size": 96,
+        "cell": 32,
+        "octaves": 4,
+        "persistence": 0.5,
+        "quantize": 8,
+        "interp": "smooth"
+      },
+      "sha256_pixels": "93fae5913d79728429ddcdf533063672739fd51e5afa6a7ac243e3e6a80d290b",
+      "sha256_png": "9779f1fe26d3815c5663d067f4b3454c0be748ce6e64f18bf79366cfb0051b59",
+      "mean": 0.4502076525054466,
+      "contrast": 0.1334127822998053,
+      "edge": 0.010212848297213622,
+      "entropy": 7.040183729460281
+    }
+  ],
+  "metrics_table": {
+    "mean": {
+      "mean_base": 0.5008728213507625,
+      "s_base": 0.03968869721828582,
+      "mean_pert": 0.5008562048951525,
+      "s_pert": 0.03832858049870723,
+      "delta": -1.661645561001901e-05,
+      "delta_over_s": 0.00041866971643411086,
+      "significant": false
+    },
+    "contrast": {
+      "mean_base": 0.12801834200720139,
+      "s_base": 0.013429261760755077,
+      "mean_pert": 0.12419241386117996,
+      "s_pert": 0.013038592765589259,
+      "delta": -0.0038259281460214234,
+      "delta_over_s": 0.2848948969929309,
+      "significant": false
+    },
+    "edge": {
+      "mean_base": 0.010056587547299621,
+      "s_base": 0.000764032740777423,
+      "mean_pert": 0.01077859477124183,
+      "s_pert": 0.0006830302551899659,
+      "delta": 0.0007220072239422087,
+      "delta_over_s": 0.9449951362130735,
+      "significant": false
+    },
+    "entropy": {
+      "mean_base": 6.971370729814576,
+      "s_base": 0.14931208001863075,
+      "mean_pert": 6.931602422943236,
+      "s_pert": 0.15055750888842195,
+      "delta": -0.039768306871340364,
+      "delta_over_s": 0.26634353272942274,
+      "significant": false
+    }
+  },
+  "significance_rule": "|Δ| > 2.0·s_base",
+  "env": {
+    "python": "3.12.8",
+    "implementation": "CPython",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "zlib": "1.2.12",
+    "generator_version": "1.0",
+    "third_party_packages": "не используются (стандартная библиотека)"
+  },
+  "script_sha256": {
+    "lab01_generator.py": "8f07d340a5a765a8e44f1fec407489cf00114ba54216aa7539c4e7116680e152",
+    "lab01_experiment.py": "69257206dab50ef35de448b45764daad0d4f60dbc98febd8953c6faee28e06b5"
+  }
+}
