@@ -1,0 +1,267 @@
+{
+ "variant": 2,
+ "scenario": "афиша фестиваля (печать, продажа билетов)",
+ "factor": "часть материалов под лицензией с условием ShareAlike",
+ "policy": {
+  "scenario": "афиша фестиваля (печать, продажа билетов)",
+  "commercial_use": true,
+  "redistribution": true,
+  "derivatives": true,
+  "share_alike_acceptable": false
+ },
+ "manifest": [
+  {
+   "id": "item01",
+   "filename": "item01.wav",
+   "media_type": "audio",
+   "source": "https://example.org/archive/item01",
+   "date_acquired": "—",
+   "license": "CC-BY-4.0",
+   "rights_holder": "Автор-09",
+   "personal_data": "no",
+   "consent": "n-a"
+  },
+  {
+   "id": "item02",
+   "filename": "item02.txt",
+   "media_type": "text",
+   "source": "https://example.org/archive/item02",
+   "date_acquired": "2026-05-16",
+   "license": "CC-BY-SA-4.0",
+   "rights_holder": "Автор-38",
+   "personal_data": "no",
+   "consent": "n-a"
+  },
+  {
+   "id": "item03",
+   "filename": "item03.png",
+   "media_type": "image",
+   "source": "https://example.org/archive/item03",
+   "date_acquired": "2026-02-23",
+   "license": "Apache-2.0",
+   "rights_holder": "Автор-33",
+   "personal_data": "no",
+   "consent": "n-a"
+  },
+  {
+   "id": "item04",
+   "filename": "item04.wav",
+   "media_type": "audio",
+   "source": "https://example.org/archive/item04",
+   "date_acquired": "2026-01-08",
+   "license": "CC-BY-4.0",
+   "rights_holder": "Автор-03",
+   "personal_data": "no",
+   "consent": "n-a"
+  },
+  {
+   "id": "item05",
+   "filename": "item05.txt",
+   "media_type": "text",
+   "source": "https://example.org/archive/item05",
+   "date_acquired": "2026-07-01",
+   "license": "CC-BY-4.0",
+   "rights_holder": "Автор-38",
+   "personal_data": "no",
+   "consent": "n-a"
+  },
+  {
+   "id": "item06",
+   "filename": "item06.png",
+   "media_type": "image",
+   "source": "https://example.org/archive/item06",
+   "date_acquired": "2026-03-10",
+   "license": "Apache-2.0",
+   "rights_holder": "Автор-18",
+   "personal_data": "no",
+   "consent": "n-a"
+  },
+  {
+   "id": "item07",
+   "filename": "item07.wav",
+   "media_type": "audio",
+   "source": "https://example.org/archive/item07",
+   "date_acquired": "2026-02-28",
+   "license": "CC-BY-SA-4.0",
+   "rights_holder": "Автор-40",
+   "personal_data": "no",
+   "consent": "n-a"
+  },
+  {
+   "id": "item08",
+   "filename": "item08.txt",
+   "media_type": "text",
+   "source": "https://example.org/archive/item08",
+   "date_acquired": "2026-05-23",
+   "license": "CC-BY-SA-4.0",
+   "rights_holder": "Автор-07",
+   "personal_data": "no",
+   "consent": "n-a"
+  },
+  {
+   "id": "item09",
+   "filename": "item09.png",
+   "media_type": "image",
+   "source": "https://example.org/archive/item09",
+   "date_acquired": "2026-07-23",
+   "license": "CC0-1.0",
+   "rights_holder": "Автор-05",
+   "personal_data": "no",
+   "consent": "n-a"
+  },
+  {
+   "id": "item10",
+   "filename": "item10.wav",
+   "media_type": "audio",
+   "source": "https://example.org/archive/item10",
+   "date_acquired": "2026-07-11",
+   "license": "CC-BY-4.0",
+   "rights_holder": "Автор-39",
+   "personal_data": "no",
+   "consent": "n-a"
+  },
+  {
+   "id": "item11",
+   "filename": "item11.txt",
+   "media_type": "text",
+   "source": "https://example.org/archive/item11",
+   "date_acquired": "2026-07-03",
+   "license": "Apache-2.0",
+   "rights_holder": "Автор-06",
+   "personal_data": "no",
+   "consent": "n-a"
+  },
+  {
+   "id": "item12",
+   "filename": "item12.png",
+   "media_type": "image",
+   "source": "https://example.org/archive/item12",
+   "date_acquired": "2026-03-26",
+   "license": "CC-BY-SA-4.0",
+   "rights_holder": "Автор-07",
+   "personal_data": "no",
+   "consent": "n-a"
+  }
+ ],
+ "licenses": {
+  "CC-BY-4.0": 4,
+  "CC-BY-SA-4.0": 4,
+  "Apache-2.0": 3,
+  "CC0-1.0": 1
+ },
+ "findings": [
+  {
+   "rule": "R8",
+   "severity": "warning",
+   "item": "item01",
+   "message": "не указана дата получения"
+  },
+  {
+   "rule": "R5",
+   "severity": "warning",
+   "item": "item02",
+   "message": "CC-BY-SA-4.0: ShareAlike требует передавать производные на тех же условиях; сценарий этого не допускает — нужно решение"
+  },
+  {
+   "rule": "R5",
+   "severity": "warning",
+   "item": "item07",
+   "message": "CC-BY-SA-4.0: ShareAlike требует передавать производные на тех же условиях; сценарий этого не допускает — нужно решение"
+  },
+  {
+   "rule": "R5",
+   "severity": "warning",
+   "item": "item08",
+   "message": "CC-BY-SA-4.0: ShareAlike требует передавать производные на тех же условиях; сценарий этого не допускает — нужно решение"
+  },
+  {
+   "rule": "R5",
+   "severity": "warning",
+   "item": "item12",
+   "message": "CC-BY-SA-4.0: ShareAlike требует передавать производные на тех же условиях; сценарий этого не допускает — нужно решение"
+  }
+ ],
+ "n_errors": 0,
+ "n_warnings": 5,
+ "risks": [
+  {
+   "risk_id": "R01",
+   "category": "Intellectual Property",
+   "description": "Материал с условием ShareAlike попадает в печатный макет, из-за чего афишу придётся распространять на тех же условиях, что политика сценария запрещает",
+   "likelihood": "4",
+   "impact": "5",
+   "measure": "Аудит лицензий при приёме материала (правило R5); материалы с SA заменяются или исключаются до вёрстки; в макет допускаются только объекты из утверждённого списка",
+   "owner": "куратор данных",
+   "trigger": "Правило R5 в отчёте аудита сработало на объекте, включённом в текущую версию макета",
+   "score": 20
+  },
+  {
+   "risk_id": "R02",
+   "category": "Intellectual Property",
+   "description": "Объекты помечены лицензией Apache-2.0, написанной для исходного кода; объём разрешений для изображения и текста неопределён, фактические права могут отличаться от заявленных",
+   "likelihood": "3",
+   "impact": "4",
+   "measure": "Запрос правообладателю на подтверждение условий для аудиовизуального материала; до ответа объект используется только в черновых макетах",
+   "owner": "куратор данных",
+   "trigger": "Правообладатель ответил отказом или не ответил в срок до даты сдачи макета в печать",
+   "score": 12
+  },
+  {
+   "risk_id": "R03",
+   "category": "Information Integrity",
+   "description": "Иллюстрация на афише воспринимается как документальное изображение события фестиваля, которое в действительности не проводилось в таком виде, и вводит зрителя в заблуждение относительно программы",
+   "likelihood": "3",
+   "impact": "4",
+   "measure": "Фактические сведения (даты, площадки, состав участников) берутся только из официальной программы; иллюстративные материалы отделяются от документальных подписью в макете",
+   "owner": "редактор",
+   "trigger": "Поступило обращение зрителя или претензия организатора о несоответствии афиши фактической программе",
+   "score": 12
+  },
+  {
+   "risk_id": "R04",
+   "category": "Value Chain and Component Integration",
+   "description": "Происхождение объекта не прослеживается: отсутствует дата получения, поэтому нельзя установить, на каких условиях материал был выгружен из архива",
+   "likelihood": "3",
+   "impact": "4",
+   "measure": "Поля источника и даты получения обязательны при приёме; объект без них помещается в карантин и не используется до ответа поставщика",
+   "owner": "куратор данных",
+   "trigger": "Правило R8 в отчёте аудита: у объекта пустое поле источника или даты получения",
+   "score": 12
+  },
+  {
+   "risk_id": "R06",
+   "category": "Confabulation",
+   "description": "Сгенерированный или подобранный текстовый материал содержит вымышленные сведения о фестивале (несуществующий участник, неверная дата), которые попадают в тираж",
+   "likelihood": "3",
+   "impact": "4",
+   "measure": "Весь текст афиши набирается вручную из официальной программы; вычитка вторым человеком перед передачей в печать",
+   "owner": "редактор",
+   "trigger": "Расхождение афиши с официальной программой обнаружено после выхода тиража",
+   "score": 12
+  },
+  {
+   "risk_id": "R05",
+   "category": "Data Privacy",
+   "description": "В набор на следующей итерации попадает материал с узнаваемыми людьми без документа-согласия, и афиша публикуется с их изображением",
+   "likelihood": "2",
+   "impact": "5",
+   "measure": "Признак наличия персональных данных обязателен в манифесте; при значении yes требуется документ-согласие с проверкой охвата и срока",
+   "owner": "юрист проекта",
+   "trigger": "Правило R6 в отчёте аудита: объект с признаком personal_data без документа-согласия",
+   "score": 10
+  },
+  {
+   "risk_id": "R07",
+   "category": "Harmful Bias or Homogenization",
+   "description": "Серия афиш фестиваля собирается из узкого пула материалов и воспроизводит однородные образы, сужая представление об аудитории события",
+   "likelihood": "3",
+   "impact": "3",
+   "measure": "Пул источников расширяется до каждой серии; макеты серии проверяются по чек-листу разнообразия перед утверждением",
+   "owner": "арт-директор",
+   "trigger": "Макет отклонён по чек-листу разнообразия либо поступила жалоба на однородность серии",
+   "score": 9
+  }
+ ],
+ "python": "3.12.8",
+ "platform": "macOS-26.6.2-arm64-arm-64bit"
+}
