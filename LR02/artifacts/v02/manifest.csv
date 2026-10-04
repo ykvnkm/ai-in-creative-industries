@@ -1,0 +1,13 @@
+id,filename,media_type,source,date_acquired,license,rights_holder,personal_data,consent,sha256
+item01,item01.wav,audio,https://example.org/archive/item01,,CC-BY-4.0,Автор-09,no,n-a,ddd4f985d1aa0138ba75dbd53bc76164400b778d277e1c97e338e772754c3b5b
+item02,item02.txt,text,https://example.org/archive/item02,2026-05-16,CC-BY-SA-4.0,Автор-38,no,n-a,4bda520a2713823338e35a9700cc769688c4cfdf142a903145e012dcb44bd0e0
+item03,item03.png,image,https://example.org/archive/item03,2026-02-23,Apache-2.0,Автор-33,no,n-a,76f4140cb6a6fffd3180b4087f0a16f33038f8855bbdad04ecadda469d0d5ae9
+item04,item04.wav,audio,https://example.org/archive/item04,2026-01-08,CC-BY-4.0,Автор-03,no,n-a,52a1a8eeff965050f6a0f23ca1f4bc3ecfc63ad9bd11f48c8cee66f98c60eea0
+item05,item05.txt,text,https://example.org/archive/item05,2026-07-01,CC-BY-4.0,Автор-38,no,n-a,e6ab23c27ca99f9b7a64c2b3df45cfe9f96022ae3c9a12c1f4d83d10217bf6d3
+item06,item06.png,image,https://example.org/archive/item06,2026-03-10,Apache-2.0,Автор-18,no,n-a,fb7a296307e7bbf0d5443520d576cbe5bac7b3eca205b1488275556ea57f168d
+item07,item07.wav,audio,https://example.org/archive/item07,2026-02-28,CC-BY-SA-4.0,Автор-40,no,n-a,335bbdde5f1e8b9c90c2d3bbe5993ea58b2847ac8d1fc06d96563fbb83d384d9
+item08,item08.txt,text,https://example.org/archive/item08,2026-05-23,CC-BY-SA-4.0,Автор-07,no,n-a,f6da8a30ce67367c21a19efcff939ad126b1b4a33d1783ac81b63a4657f539bb
+item09,item09.png,image,https://example.org/archive/item09,2026-07-23,CC0-1.0,Автор-05,no,n-a,d17306d287b465bde0be45df2a28d157a85b6ffeb31880eb9e110ecf17a49a24
+item10,item10.wav,audio,https://example.org/archive/item10,2026-07-11,CC-BY-4.0,Автор-39,no,n-a,07e09997daf9d7bfae90e08dfffd2d42129cb98f01a000fa477027055361ccef
+item11,item11.txt,text,https://example.org/archive/item11,2026-07-03,Apache-2.0,Автор-06,no,n-a,ab3414188bca840e3d7b1f3241f93528d4ce70756bd55d9e1b2f55ef37dde474
+item12,item12.png,image,https://example.org/archive/item12,2026-03-26,CC-BY-SA-4.0,Автор-07,no,n-a,87220e24f3838e49ab89a729b1b44262a519dc917ecf6c976db188fb31744e11
