@@ -35,6 +35,11 @@ Thumbs.db
 .vscode/
 *.swp
 
+# --- Служебные файлы офисных редакторов ---
+# Word и Excel создают ~$имя.docx, пока документ открыт; LibreOffice — .~lock.имя#
+~$*
+.~lock.*#
+
 # --- Временное ---
 tmp/
 scratch/
