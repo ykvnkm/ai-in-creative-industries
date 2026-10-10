@@ -1,0 +1,14 @@
+{
+  "variant": 2,
+  "ctx": 1,
+  "cond": "seed_plus_1",
+  "seed": 1002,
+  "sha_a": "403134b8e34029d144d41b14a9de11273a7a6dc3defb79fc871aa181b48faf1d",
+  "sha_b": "098ebd438eb3befedd979cf5edc0a71ff403f3ae22a664e1644d4309f93eca08",
+  "pixel_equal": false,
+  "max_diff": 254,
+  "psnr": 10.628205374321828,
+  "verdict": "different",
+  "seconds": 0.65,
+  "psnr_fixed_noise": null
+}
