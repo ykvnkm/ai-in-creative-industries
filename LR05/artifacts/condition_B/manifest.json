@@ -17,7 +17,7 @@
     "transformers": "5.16.1",
     "pillow": "11.3.0"
   },
-  "load_seconds": 38.1,
+  "load_seconds": 65.8,
   "generation_seconds": null,
   "image_size": [
     512,

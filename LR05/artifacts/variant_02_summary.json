@@ -9,6 +9,6 @@
   "max_diff": 254,
   "psnr": 10.628205374321828,
   "verdict": "different",
-  "seconds": 0.65,
+  "seconds": 0.64,
   "psnr_fixed_noise": null
 }

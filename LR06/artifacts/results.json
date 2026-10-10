@@ -1,0 +1,465 @@
+{
+  "lab": "ЛР 6. Исследование параметров text-to-image генерации",
+  "author": "Яковенко Максим Михайлович",
+  "variant": 2,
+  "brief": 1,
+  "factor": "size_512_to_384",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105
+  ],
+  "work_dir": "/content/LR06",
+  "environment": {
+    "python": "3.13.15",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "torch": "2.11.0+cu130",
+    "diffusers": "0.40.0",
+    "transformers": "5.16.1",
+    "pillow": "11.3.0",
+    "numpy": "2.1.3",
+    "scipy": "1.16.3",
+    "cuda": true,
+    "device": "Tesla T4",
+    "cpu_count": 2,
+    "torch_threads": 1,
+    "mem_total": "13286936 kB",
+    "mem_available": "11535956 kB"
+  },
+  "adaptation": {
+    "applied": false,
+    "replacements": []
+  },
+  "libraries": {
+    "lab05_lib.py": {
+      "bytes": 6447,
+      "sha256": "4eb176506585ffcda1702605a767309fb451808229c3622f80ce882b7fa2ce1a",
+      "matches_methodical": true
+    },
+    "lab06_lib.py": {
+      "bytes": 6580,
+      "sha256": "c6d8473cf5a3000f4c27fbdef57916c2fbce347db272928d5c4729472f748bd8",
+      "matches_methodical": true
+    }
+  },
+  "load": {
+    "pipe_seconds": 23.1,
+    "clip_seconds": 16.4,
+    "unet_dtype": "torch.float16",
+    "device": "cuda:0",
+    "clip_device": "cuda:0",
+    "model": "stabilityai/sd-turbo",
+    "model_revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+    "clip_model": "openai/clip-vit-base-patch32",
+    "clip_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268"
+  },
+  "settings": {
+    "A": {
+      "prompt": "editorial poster concept for a robotics festival, glowing mechanical arm silhouette, deep blue and amber palette, clean composition, no text, no logo, no people",
+      "steps": 1,
+      "guidance": 0.0,
+      "size": 512
+    },
+    "B": {
+      "prompt": "editorial poster concept for a robotics festival, glowing mechanical arm silhouette, deep blue and amber palette, clean composition, no text, no logo, no people",
+      "steps": 1,
+      "guidance": 0.0,
+      "size": 384
+    }
+  },
+  "brief_text": "editorial poster concept for a robotics festival, glowing mechanical arm silhouette, deep blue and amber palette, clean composition, no text, no logo, no people",
+  "tolerance": {
+    "clip": {
+      "kind": "abs",
+      "value": 1.0
+    },
+    "edge": {
+      "kind": "rel",
+      "value": 0.1
+    },
+    "contrast": {
+      "kind": "rel",
+      "value": 0.1
+    },
+    "seconds": {
+      "kind": "rel",
+      "value": 0.2
+    }
+  },
+  "direction": {
+    "clip": 1,
+    "seconds": -1,
+    "edge": 0,
+    "contrast": 0
+  },
+  "hypothesis": {
+    "clip": "нейтрально",
+    "edge": "ухудшение (рост > 10 % на исходном размере)",
+    "contrast": "нейтрально",
+    "seconds": "улучшение"
+  },
+  "summary": [
+    {
+      "metric": "clip",
+      "A": 30.797866582870483,
+      "s": 1.4309017437110398,
+      "B": 28.53686809539795,
+      "delta": -2.260998487472534,
+      "delta_rel_pct": -7.341412696196569,
+      "ratio": 1.5801214146323148,
+      "sig_2s": false,
+      "verdict": "ухудшение",
+      "agree_2s_tol": false
+    },
+    {
+      "metric": "edge",
+      "A": 0.045660816369404854,
+      "s": 0.006960480109480653,
+      "B": 0.04906152322188618,
+      "delta": 0.003400706852481325,
+      "delta_rel_pct": 7.447757449119936,
+      "ratio": 0.48857360397443395,
+      "sig_2s": false,
+      "verdict": "нейтрально",
+      "agree_2s_tol": true
+    },
+    {
+      "metric": "contrast",
+      "A": 0.1922867990891968,
+      "s": 0.02249353315005205,
+      "B": 0.2187137395982727,
+      "delta": 0.026426940509075902,
+      "delta_rel_pct": 13.743502223892728,
+      "ratio": 1.174868364733299,
+      "sig_2s": false,
+      "verdict": "ухудшение",
+      "agree_2s_tol": false
+    },
+    {
+      "metric": "seconds",
+      "A": 0.28008871659997114,
+      "s": 0.0040314239023511,
+      "B": 0.18567375099996752,
+      "delta": -0.09441496560000362,
+      "delta_rel_pct": -33.708950059151846,
+      "ratio": 23.41975636572017,
+      "sig_2s": true,
+      "verdict": "улучшение",
+      "agree_2s_tol": true
+    }
+  ],
+  "series_seconds": 7.7,
+  "per_seed": [
+    {
+      "mode": "A",
+      "seed": 101,
+      "size": 512,
+      "png_sha256": "84db2534b3e66ea6f5ac17a7d3ba210bfb7653bcd738534372564a5b46b79b36",
+      "clip": 30.30926287174225,
+      "edge": 0.047968852990238335,
+      "contrast": 0.15688247029165409,
+      "seconds": 0.2834555279999904
+    },
+    {
+      "mode": "A",
+      "seed": 102,
+      "size": 512,
+      "png_sha256": "0d0d796d3cf4ee23576600f4c520c79fe15e08b5858e6adb3dae68beaf3321b9",
+      "clip": 32.94239044189453,
+      "edge": 0.04712976365363871,
+      "contrast": 0.21912255152940358,
+      "seconds": 0.27830047299994476
+    },
+    {
+      "mode": "A",
+      "seed": 103,
+      "size": 512,
+      "png_sha256": "d0a3ff677d892b96cc1103be02b5f24084a943e9a2d3a00c6a6df13642771c69",
+      "clip": 31.327080726623535,
+      "edge": 0.055380908620380406,
+      "contrast": 0.19766126169093032,
+      "seconds": 0.27405266099992787
+    },
+    {
+      "mode": "A",
+      "seed": 104,
+      "size": 512,
+      "png_sha256": "82a2b32b5aa51daa43e5d08343825b8e9ac738460520494b7fe1433a312652bc",
+      "clip": 30.29041886329651,
+      "edge": 0.03952160927797911,
+      "contrast": 0.1967321886419229,
+      "seconds": 0.2808843320000278
+    },
+    {
+      "mode": "A",
+      "seed": 105,
+      "size": 512,
+      "png_sha256": "21897cc9e657705c01bd9d39641104cfadcc7215b2e3e8982c2302401b22ce58",
+      "clip": 29.120180010795593,
+      "edge": 0.038302947304787734,
+      "contrast": 0.1910355232920731,
+      "seconds": 0.28375058899996475
+    },
+    {
+      "mode": "B",
+      "seed": 101,
+      "size": 384,
+      "png_sha256": "256158c9736efe2532585a7df6bbad1a513c2202149d7cebb06f3c838a2e882f",
+      "clip": 26.75587236881256,
+      "edge": 0.04487116353464002,
+      "contrast": 0.2257807754167696,
+      "seconds": 0.18534185099997558
+    },
+    {
+      "mode": "B",
+      "seed": 102,
+      "size": 384,
+      "png_sha256": "76587fa5d909893db4e3183f5626b03cbeb3a423eb5776a4127231b05946518b",
+      "clip": 25.478121638298035,
+      "edge": 0.05131180434084198,
+      "contrast": 0.15139288907326692,
+      "seconds": 0.18554933099994741
+    },
+    {
+      "mode": "B",
+      "seed": 103,
+      "size": 384,
+      "png_sha256": "88e90f270113a0cd75bbcf6f4fad58ea90fdb0220390c9a4445f56c4d1a392b4",
+      "clip": 27.448123693466187,
+      "edge": 0.04616869616764026,
+      "contrast": 0.19475436594975856,
+      "seconds": 0.18495143699999517
+    },
+    {
+      "mode": "B",
+      "seed": 104,
+      "size": 384,
+      "png_sha256": "a61e48e290098bf78f3b7f012089bd124d978945685423940e242399a8810468",
+      "clip": 32.81703591346741,
+      "edge": 0.05379343673695017,
+      "contrast": 0.33308246069408004,
+      "seconds": 0.18616119199998593
+    },
+    {
+      "mode": "B",
+      "seed": 105,
+      "size": 384,
+      "png_sha256": "11499c52b0932f54350f9f1532e7dee5c39f782282fea22b2cea8191a807ffd4",
+      "clip": 30.185186862945557,
+      "edge": 0.04916251532935844,
+      "contrast": 0.18855820685748828,
+      "seconds": 0.18636494399993353
+    }
+  ],
+  "common_scale": {
+    "edge@384": {
+      "A": 0.050383410752012914,
+      "s": 0.008041219715213547,
+      "B": 0.04906152322188618,
+      "delta": -0.001321887530126735,
+      "delta_rel_pct": -2.6236562995567403,
+      "ratio": 0.16438893313980665,
+      "sig_2s": false,
+      "verdict": "нейтрально"
+    },
+    "edge@512": {
+      "A": 0.045660816369404854,
+      "s": 0.006960480109480653,
+      "B": 0.04359648680662931,
+      "delta": -0.002064329562775545,
+      "delta_rel_pct": -4.521008880075027,
+      "ratio": 0.29657861674854674,
+      "sig_2s": false,
+      "verdict": "нейтрально"
+    },
+    "contrast@384": {
+      "A": 0.19010025803682926,
+      "s": 0.023294769635316025,
+      "B": 0.2187137395982727,
+      "delta": 0.028613481561443443,
+      "delta_rel_pct": 15.0517847039955,
+      "ratio": 1.2283221516843845,
+      "sig_2s": false,
+      "verdict": "ухудшение"
+    },
+    "contrast@512": {
+      "A": 0.1922867990891968,
+      "s": 0.02249353315005205,
+      "B": 0.21826360005116036,
+      "delta": 0.02597680096196356,
+      "delta_rel_pct": 13.509404225879074,
+      "ratio": 1.1548564108926325,
+      "sig_2s": false,
+      "verdict": "ухудшение"
+    },
+    "edge: только масштаб (A 512 -> A 384)": {
+      "A": 0.045660816369404854,
+      "s": 0.006960480109480653,
+      "B": 0.050383410752012914,
+      "delta": 0.00472259438260806,
+      "delta_rel_pct": 10.342772552293756,
+      "ratio": 0.6784868727913699,
+      "sig_2s": false,
+      "verdict": "—"
+    }
+  },
+  "disagreement_2s_vs_tolerance": [
+    {
+      "metric": "clip",
+      "note": "вне допуска, но не значимо по 2s"
+    },
+    {
+      "metric": "contrast",
+      "note": "вне допуска, но не значимо по 2s"
+    }
+  ],
+  "tolerance_sensitivity": {
+    "clip": {
+      "half": "ухудшение",
+      "base": "ухудшение",
+      "double": "ухудшение",
+      "flip_threshold": 2.260998487472534,
+      "flip_in_units_of_tol": 2.260998487472534
+    },
+    "edge": {
+      "half": "ухудшение",
+      "base": "нейтрально",
+      "double": "нейтрально",
+      "flip_threshold": 0.07447757449119936,
+      "flip_in_units_of_tol": 0.7447757449119936
+    },
+    "contrast": {
+      "half": "ухудшение",
+      "base": "ухудшение",
+      "double": "нейтрально",
+      "flip_threshold": 0.13743502223892728,
+      "flip_in_units_of_tol": 1.3743502223892727
+    },
+    "seconds": {
+      "half": "улучшение",
+      "base": "улучшение",
+      "double": "нейтрально",
+      "flip_threshold": 0.3370895005915185,
+      "flip_in_units_of_tol": 1.6854475029575924
+    }
+  },
+  "comparison_seed101_reproduced": {
+    "A": true,
+    "B": true
+  },
+  "guidance_check": {
+    "sha_equal_0_vs_1": true,
+    "cfg_at_1": false,
+    "cfg_at_3": true,
+    "psnr_0_vs_3_db": 11.61,
+    "sha_x0": "84db2534b3e66ea6f5ac17a7d3ba210bfb7653bcd738534372564a5b46b79b36",
+    "methodical": {
+      "sha_equal": true,
+      "cfg_at_1": false,
+      "cfg_at_3": true,
+      "psnr_db": 11.6
+    },
+    "x0_equals_series_A_seed101": true
+  },
+  "demo_variant1": {
+    "rows": [
+      [
+        "clip",
+        30.797866582870483,
+        1.4309017437110398,
+        30.29200315475464,
+        -0.5058634281158447,
+        0.35352771798564536,
+        false
+      ],
+      [
+        "edge",
+        0.045660816369404854,
+        0.006960480109480653,
+        0.09197612883167525,
+        0.04631531246227039,
+        6.654039913020619,
+        true
+      ],
+      [
+        "contrast",
+        0.1922867990891968,
+        0.02249353315005205,
+        0.2778616052724856,
+        0.0855748061832888,
+        3.804418168209861,
+        true
+      ],
+      [
+        "seconds",
+        0.2928423733999807,
+        0.0068130657489905025,
+        0.5353277308000088,
+        0.24248535740002813,
+        35.59122520371353,
+        true
+      ]
+    ],
+    "seconds_total": 5.5,
+    "comparison": [
+      {
+        "metric": "clip",
+        "A_ref": 30.796,
+        "A": 30.797866582870483,
+        "B_ref": 30.292,
+        "B": 30.29200315475464,
+        "sig_ref": false,
+        "sig": false,
+        "verdict_ref": "в допуске",
+        "verdict": "в допуске",
+        "dev_A_pct": 0.0060611211536693846,
+        "dev_B_pct": 1.0414481173512014e-05,
+        "conclusion_match": true
+      },
+      {
+        "metric": "edge",
+        "A_ref": 0.0457,
+        "A": 0.045660816369404854,
+        "B_ref": 0.092,
+        "B": 0.09197612883167525,
+        "sig_ref": true,
+        "sig": true,
+        "verdict_ref": "вне допуска",
+        "verdict": "вне допуска",
+        "dev_A_pct": -0.08574098598499724,
+        "dev_B_pct": -0.025946922092121377,
+        "conclusion_match": true
+      },
+      {
+        "metric": "contrast",
+        "A_ref": 0.1923,
+        "A": 0.1922867990891968,
+        "B_ref": 0.2778,
+        "B": 0.2778616052724856,
+        "sig_ref": true,
+        "sig": true,
+        "verdict_ref": "вне допуска",
+        "verdict": "вне допуска",
+        "dev_A_pct": -0.00686474820759315,
+        "dev_B_pct": 0.022176124004899125,
+        "conclusion_match": true
+      },
+      {
+        "metric": "seconds",
+        "A_ref": 0.2854,
+        "A": 0.2928423733999807,
+        "B_ref": 0.5266,
+        "B": 0.5353277308000088,
+        "sig_ref": true,
+        "sig": true,
+        "verdict_ref": "вне допуска",
+        "verdict": "вне допуска",
+        "ratio_BA_ref": 1.8451296426068675,
+        "ratio_BA": 1.828040541348939,
+        "conclusion_match": true
+      }
+    ]
+  }
+}
