@@ -1,0 +1,54 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "metadata": {
+    "kernelspec": {
+      "display_name": "IJulia 1.9.3",
+      "language": "julia",
+      "name": "ijulia-1.9"
+    },
+    "language_info": {
+      "file_extension": ".jl",
+      "name": "julia",
+      "version": "1.9.3"
+    },
+    "engee": {}
+  },
+  "cells": [
+    {
+      "id": "38a1cb5a",
+      "cell_type": "code",
+      "source": [
+        "# Поиск интерпретатора Python с torch\ncands = String[]\nfor d in (\"/user/.user_venvs\",)\n    isdir(d) && for v in readdir(d); push!(cands, joinpath(d, v, \"bin\", \"python3\")); end\nend\nappend!(cands, [\"/usr/bin/python3\", \"/usr/local/bin/python3\", \"/opt/conda/bin/python3\", something(Sys.which(\"python3\"), \"\"), something(Sys.which(\"python\"), \"\")])\nfor py in unique(filter(isfile, cands))\n    r = read(ignorestatus(`$py -c \"import sys, importlib.util as u; print(sys.version.split()[0], 'torch' if u.find_spec('torch') else 'no-torch', sys.prefix)\"`), String)\n    println(py, \" => \", strip(r))\nend\nfor d in (\"/usr/local/share/jupyter/kernels\", \"/usr/share/jupyter/kernels\", joinpath(homedir(), \".local/share/jupyter/kernels\"), \"/opt/conda/share/jupyter/kernels\")\n    isdir(d) || continue\n    for k in readdir(d)\n        f = joinpath(d, k, \"kernel.json\"); isfile(f) && println(f, \": \", read(f, String))\n    end\nend\nprintln(\"ENV PYTHON: \", get(ENV, \"PYTHON\", \"-\"), \"; HOME: \", homedir())"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": "/user/.user_venvs/py3.11/bin/python3 => 3.11.11 no-torch /user/.user_venvs/py3.11\n/usr/bin/python3 => 3.10.12 no-torch /usr\n/user/.user_venvs/py3.11/bin/python => 3.11.11 no-torch /user/.user_venvs/py3.11\n/usr/local/share/jupyter/kernels/engee_jl/kernel.json: {\n  \"display_name\": \"engee_jl\",\n  \"argv\": [\n    \"nice\",\n    \"-n\",\n    \"19\",\n    \"/usr/local/julia/bin/julia\",\n    \"-i\",\n    \"--color=yes\",\n    \"-L\",\n    \"/usr/local/share/jupyter/kernels/engee_jl/preload.jl\",\n    \"-t5,3\",\n    \"-J\",\n    \"/opt/sysimg/core.so\",\n    \"/opt/depot/core/packages/IJulia/mmsj9/src/kernel.jl\",\n    \"{connection_file}\"\n  ],\n  \"language\": \"julia\",\n  \"env\": {},\n  \"interrupt_mode\": \"message\"\n}\n\n/usr/local/share/jupyter/kernels/engee_py/kernel.json: {\n  \"display_name\": \"engee_py\",\n  \"argv\": [\n    \"nice\",\n    \"-n\",\n    \"19\",\n    \"/user/.user_venvs/py3.11/bin/python\",\n    \"-m\",\n    \"ipykernel_launcher\",\n    \"-f\",\n    \"{connection_file}\",\n    \"--InteractiveShellApp.exec_files=[\\\"/usr/local/share/jupyter/kernels/engee_py/preload.py\\\"]\"\n  ],\n  \"language\": \"python\",\n  \"metadata\": {\n    \"debugger\": true\n  }\n}\n\n/usr/local/share/jupyter/kernels/julia-1.12/kernel.json: {\n  \"display_name\": \"Julia 1.12.6\",\n  \"argv\": [\n    \"/usr/local/julia/bin/julia\",\n    \"-i\",\n    \"--color=yes\",\n    \"--project=@.\",\n    \"/opt/depot/core/packages/IJulia/mmsj9/src/kernel.jl\",\n    \"{connection_file}\"\n  ],\n  \"language\": \"julia\",\n  \"env\": {},\n  \"interrupt_mode\": \"signal\"\n}\n\n/usr/local/share/jupyter/kernels/python3/kernel.json: {\n \"argv\": [\n  \"/opt/python3.11/bin/python\",\n  \"-Xfrozen_modules=off\",\n  \"-m\",\n  \"ipykernel_launcher\",\n  \"-f\",\n  \"{connection_file}\"\n ],\n \"display_name\": \"Python 3 (ipykernel)\",\n \"language\": \"python\",\n \"metadata\": {\n  \"debugger\": true\n }\n}\nENV PYTHON: -; HOME: /user\n"
+        }
+      ],
+      "metadata": {
+        "name": " ",
+        "engee": {
+          "isDisplay": true,
+          "isParagraph": false,
+          "isClosedParagraph": false,
+          "amountHideCellsInside": 0,
+          "codeOutputView": "col",
+          "codeOutputHidden": false,
+          "outputInfo": {
+            "isExpanded": false,
+            "scrollTop": 0
+          },
+          "maskInfo": {
+            "isMaskVisible": true,
+            "isEditorVisible": true,
+            "isAutoplayActive": false
+          }
+        }
+      }
+    }
+  ]
+}
