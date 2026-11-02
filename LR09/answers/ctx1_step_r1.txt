@@ -1,0 +1,57 @@
+**Элементы** по описаниям:
+
+1. Предмет: светящаяся механическая рука; стиль: 3D-визуализация; цвета: синий, янтарный; ограничения: без людей и текста.
+2. Предмет: роботы-манипуляторы; стиль: строгая индустриальная 3D-визуализация; цвета: серый, белый; ограничения: исключить синий, оставить много пустого места для заголовка; освещение холодное.
+3. Предмет: дружелюбный маленький робот на столе; стиль: плоская векторная иллюстрация; цвета: оранжевый, жёлтый; прямых запретов нет; освещение — тёплый свет лампы.
+4. Предмет: рука-манипулятор, берущая светящийся шар; стиль: 3D-визуализация; цвета: ровно чёрный и синий, электрический оттенок передан в освещении; прямых запретов нет; композиция — крупный план.
+5. Предмет: ряды стеллажей и робот-погрузчик; стиль: изометрическая 3D-визуализация; цвета: серый, оранжевый; прямых запретов нет.
+
+```json
+[
+  {
+    "subject": "Glowing mechanical robotic arm",
+    "setting": "Robotics festival poster background",
+    "style": "3D render",
+    "lighting": "Blue and amber glow",
+    "palette": ["blue", "amber"],
+    "composition": "centered",
+    "avoid": ["people", "text"]
+  },
+  {
+    "subject": "Industrial robotic manipulator arms",
+    "setting": "Austere industrial competition poster background",
+    "style": "3D render",
+    "lighting": "Cool white light",
+    "palette": ["gray", "white"],
+    "composition": "wide negative space",
+    "avoid": []
+  },
+  {
+    "subject": "Friendly small robot on a table",
+    "setting": "School robotics club workspace",
+    "style": "flat vector illustration",
+    "lighting": "Warm lamplight",
+    "palette": ["orange", "yellow"],
+    "composition": "centered",
+    "avoid": []
+  },
+  {
+    "subject": "Robotic manipulator arm grasping a glowing sphere",
+    "setting": "Black festival website banner background",
+    "style": "3D render",
+    "lighting": "Electric blue glow",
+    "palette": ["black", "blue"],
+    "composition": "close-up",
+    "avoid": []
+  },
+  {
+    "subject": "Rows of storage racks and a robotic forklift",
+    "setting": "Automated warehouse interior",
+    "style": "isometric 3D render",
+    "lighting": "Even overhead lighting",
+    "palette": ["gray", "orange"],
+    "composition": "wide negative space",
+    "avoid": []
+  }
+]
+```

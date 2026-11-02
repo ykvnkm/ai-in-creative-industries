@@ -1,0 +1,49 @@
+```json
+[
+  {
+    "subject": "Glowing mechanical robotic hand for a robotics festival",
+    "setting": "Dark futuristic festival poster background",
+    "style": "3D render",
+    "lighting": "Glowing amber and blue light",
+    "palette": ["blue", "amber"],
+    "composition": "centered",
+    "avoid": ["people", "text"]
+  },
+  {
+    "subject": "Industrial robotic manipulators competing in a precision challenge",
+    "setting": "Stark industrial competition arena",
+    "style": "3D render",
+    "lighting": "Cool white industrial light",
+    "palette": ["gray", "white", "black"],
+    "composition": "wide negative space",
+    "avoid": []
+  },
+  {
+    "subject": "Friendly little robot standing on a desk",
+    "setting": "School robotics club workspace",
+    "style": "3D render",
+    "lighting": "Warm desk lamp light",
+    "palette": ["amber", "white", "orange"],
+    "composition": "centered",
+    "avoid": []
+  },
+  {
+    "subject": "Robotic manipulator hand grasping a glowing sphere",
+    "setting": "Black robotics festival website banner background",
+    "style": "3D render",
+    "lighting": "Electric blue sphere glow",
+    "palette": ["black", "blue"],
+    "composition": "close-up",
+    "avoid": []
+  },
+  {
+    "subject": "Rows of storage racks and a robotic forklift",
+    "setting": "Automated warehouse interior",
+    "style": "isometric 3D render",
+    "lighting": "Even overhead industrial light",
+    "palette": ["gray", "orange"],
+    "composition": "rule of thirds",
+    "avoid": []
+  }
+]
+```

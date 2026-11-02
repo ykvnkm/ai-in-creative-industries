@@ -1,0 +1,57 @@
+**Элементы**
+
+1. Предмет: светящаяся механическая рука; стиль: 3D; цвета: синий и янтарный; ограничения: без людей и текста.
+2. Предмет: роботы-манипуляторы; стиль: строгий индустриальный 3D; цвета: серый, белый и чёрный, без синего; холодный свет, много пустого места для заголовка.
+3. Предмет: дружелюбный маленький робот на столе; стиль: плоская векторная иллюстрация; цвета: янтарный и оранжевый; тёплый свет лампы; запретов нет.
+4. Предмет: рука-манипулятор со светящимся шаром; стиль: 3D; цвета: ровно чёрный и синий, с электрическим синим свечением; крупный план; запретов нет.
+5. Предмет: ряды стеллажей и робот-погрузчик; стиль: изометрический 3D; цвета: серый и оранжевый; запретов нет.
+
+```json
+[
+  {
+    "subject": "Glowing mechanical robotic arm",
+    "setting": "Robotics festival poster backdrop",
+    "style": "3D render",
+    "lighting": "Blue and amber glow",
+    "palette": ["blue", "amber"],
+    "composition": "centered",
+    "avoid": ["people", "text"]
+  },
+  {
+    "subject": "Industrial robotic arms in competition",
+    "setting": "Austere industrial competition arena",
+    "style": "3D render",
+    "lighting": "Cool white industrial light",
+    "palette": ["gray", "white", "black"],
+    "composition": "wide negative space",
+    "avoid": []
+  },
+  {
+    "subject": "Friendly small robot on a desk",
+    "setting": "School robotics club workspace",
+    "style": "flat vector illustration",
+    "lighting": "Warm lamplight",
+    "palette": ["amber", "orange"],
+    "composition": "centered",
+    "avoid": []
+  },
+  {
+    "subject": "Robotic arm grasping an electric blue glowing sphere",
+    "setting": "Black festival website banner background",
+    "style": "3D render",
+    "lighting": "Electric blue emissive glow",
+    "palette": ["black", "blue"],
+    "composition": "close-up",
+    "avoid": []
+  },
+  {
+    "subject": "Rows of storage racks and a robotic forklift",
+    "setting": "Automated warehouse interior",
+    "style": "isometric 3D render",
+    "lighting": "Even overhead industrial light",
+    "palette": ["gray", "orange"],
+    "composition": "wide negative space",
+    "avoid": []
+  }
+]
+```

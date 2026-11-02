@@ -1,0 +1,209 @@
+{
+ "variant": 2,
+ "ctx": 1,
+ "pair": [
+  "turbo",
+  "bk"
+ ],
+ "brief": "editorial poster concept for a robotics festival, glowing mechanical arm silhouette, deep blue and amber palette, clean composition, no text, no logo, no people",
+ "env": {
+  "date_utc": "2026-11-02 20:05:04",
+  "python": "3.11.11",
+  "torch": "2.4.1+cpu",
+  "diffusers": "0.32.2",
+  "transformers": "4.57.6",
+  "numpy": "2.1.3",
+  "scipy": "1.15.2",
+  "pillow": "11.1.0",
+  "huggingface_hub": "0.36.2",
+  "cuda": false,
+  "torch_threads": 4,
+  "cpu": "Intel(R) Xeon(R) Platinum 8180 CPU @ 2.50GHz",
+  "cpu_count": 112,
+  "clip": "openai/clip-vit-large-patch14",
+  "clip_revision": "32bd64288804d66eefd0ccbe215aa642df71cc41",
+  "seeds": [
+   101,
+   102,
+   103,
+   104,
+   105
+  ],
+  "models": {
+   "turbo": {
+    "repo": "stabilityai/sd-turbo",
+    "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2",
+    "steps": 1,
+    "guidance": 0.0,
+    "size": 512,
+    "note": "дистиллированная SD 2.1, 1 шаг, без управления"
+   },
+   "bk": {
+    "repo": "nota-ai/bk-sdm-tiny",
+    "revision": "0364108e53b7f7f4d2585e817a0b7a83dc261cfa",
+    "steps": 10,
+    "guidance": 7.5,
+    "size": 512,
+    "scheduler": "dpm",
+    "note": "облегчённая SD 1.x, DPM-Solver++, 10 шагов"
+   }
+  }
+ },
+ "load_seconds": {
+  "turbo": 1.4581002853810787,
+  "bk": 28.005462650209665
+ },
+ "variant_summary_seconds": 555.4210439492017,
+ "peak_rss_gb": 7.451118469238281,
+ "rows": [
+  [
+   "clip_brief",
+   25.16529530286789,
+   0.8040295537422786,
+   27.502784729003906,
+   2.337489426136017,
+   2.9072182922336576,
+   true
+  ],
+  [
+   "clip_text",
+   12.397268414497375,
+   0.9434606992989486,
+   13.954094350337982,
+   1.5568259358406067,
+   1.6501227205303066,
+   false
+  ],
+  [
+   "edge",
+   0.052689661261565456,
+   0.0038594413893861183,
+   0.01440212581350885,
+   -0.0382875354480566,
+   9.920486304922642,
+   true
+  ],
+  [
+   "contrast",
+   0.17502283087166942,
+   0.017087309880303346,
+   0.13738536012299757,
+   -0.03763747074867185,
+   2.2026562994598002,
+   true
+  ],
+  [
+   "seconds",
+   18.586812352389096,
+   0.33503931418250765,
+   63.21770978346467,
+   44.630897431075574,
+   133.21092642508086,
+   true
+  ]
+ ],
+ "rows_recomputed_match": true,
+ "time_ratio": 3.4012131066325013,
+ "per_seed": [
+  {
+   "model": "turbo",
+   "seed": 101,
+   "clip_brief": 24.45605993270874,
+   "clip_text": 12.095042318105698,
+   "edge": 0.04988290548905468,
+   "contrast": 0.17012024677067744,
+   "seconds": 18.788883106783032,
+   "pixels_sha256": "0f16cb1a6422a81e3e07c03503b32b1843c7b7c8df477f0cbb64744b6a5e71c1"
+  },
+  {
+   "model": "turbo",
+   "seed": 102,
+   "clip_brief": 26.131674647331238,
+   "clip_text": 12.814885377883911,
+   "edge": 0.05112966859054516,
+   "contrast": 0.1711565072021831,
+   "seconds": 18.25588846206665,
+   "pixels_sha256": "3ba6768b54ebeed91874cd11a29cec7844203ae3868fd5e29dab972cf216bb11"
+  },
+  {
+   "model": "turbo",
+   "seed": 103,
+   "clip_brief": 24.213044345378876,
+   "clip_text": 13.18628191947937,
+   "edge": 0.05829639051656915,
+   "contrast": 0.1617587921010287,
+   "seconds": 18.39382329210639,
+   "pixels_sha256": "9cf6298d4fbd7e6d91243aa5f4fa62d1f9ac30505f89bd6768ef526fcac864f6"
+  },
+  {
+   "model": "turbo",
+   "seed": 104,
+   "clip_brief": 25.529900193214417,
+   "clip_text": 10.881296545267105,
+   "edge": 0.049148583121187944,
+   "contrast": 0.1671944009181931,
+   "seconds": 18.423984952270985,
+   "pixels_sha256": "b0bde76cdced6c3834126fe9d353deb20b31ac7303293d96bccf78b23af728c4"
+  },
+  {
+   "model": "turbo",
+   "seed": 105,
+   "clip_brief": 25.495797395706177,
+   "clip_text": 13.008835911750793,
+   "edge": 0.05499075859047035,
+   "contrast": 0.2048842073662648,
+   "seconds": 19.07148194871843,
+   "pixels_sha256": "34f9881a28bb2aad738dc94a742f829eed1d6bde5eb0f95132b426e4624f4129"
+  },
+  {
+   "model": "bk",
+   "seed": 101,
+   "clip_brief": 24.0127831697464,
+   "clip_text": 14.723755419254303,
+   "edge": 0.00880605919445616,
+   "contrast": 0.14727654032185392,
+   "seconds": 60.155620872974396,
+   "pixels_sha256": "d5a46a5b6b87997c69998ed9f63ad4a1a616e25550d76353de06a2f57a179b35"
+  },
+  {
+   "model": "bk",
+   "seed": 102,
+   "clip_brief": 31.837990880012512,
+   "clip_text": 14.386992156505585,
+   "edge": 0.01258801343881247,
+   "contrast": 0.12162502491874859,
+   "seconds": 68.13477538898587,
+   "pixels_sha256": "9dfb8aff5ff2fa7cbeffe40f9f8beb649f89ed4a7d87952ab113e065a480ade8"
+  },
+  {
+   "model": "bk",
+   "seed": 103,
+   "clip_brief": 28.429150581359863,
+   "clip_text": 12.852950394153595,
+   "edge": 0.027017657168093553,
+   "contrast": 0.12277495975567913,
+   "seconds": 62.268302166834474,
+   "pixels_sha256": "d628bbc48ed7d7497cb7833bbc669b8c7adc1603a9bb3d927e04d7b062a95508"
+  },
+  {
+   "model": "bk",
+   "seed": 104,
+   "clip_brief": 26.420557498931885,
+   "clip_text": 14.32359665632248,
+   "edge": 0.012019928195796075,
+   "contrast": 0.1533135426532231,
+   "seconds": 63.688632283359766,
+   "pixels_sha256": "9f973efd3c23fb0155deb4297c127c6b3bc746476c6683f88943e10dc90337f4"
+  },
+  {
+   "model": "bk",
+   "seed": 105,
+   "clip_brief": 26.813441514968872,
+   "clip_text": 13.483177125453949,
+   "edge": 0.01157897107038599,
+   "contrast": 0.1419367329654831,
+   "seconds": 61.84121820516884,
+   "pixels_sha256": "3ee3cb7e592f85ef7fd8636bf6c68ae08b61d4eec9a7efff6930ab29d0f85894"
+  }
+ ]
+}

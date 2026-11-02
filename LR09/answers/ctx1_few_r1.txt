@@ -1,0 +1,49 @@
+```json
+[
+  {
+    "subject": "glowing mechanical robotic arm",
+    "setting": "robotics festival poster background",
+    "style": "3D render",
+    "lighting": "luminous blue and amber glow",
+    "palette": ["blue", "amber"],
+    "composition": "centered",
+    "avoid": ["people", "text"]
+  },
+  {
+    "subject": "industrial robotic manipulators in competition",
+    "setting": "stark industrial arena",
+    "style": "3D render",
+    "lighting": "cold white industrial light",
+    "palette": ["gray", "white", "black"],
+    "composition": "wide negative space",
+    "avoid": []
+  },
+  {
+    "subject": "friendly small robot on a table",
+    "setting": "school robotics club workspace",
+    "style": "3D render",
+    "lighting": "warm table lamp light",
+    "palette": ["amber", "orange", "white"],
+    "composition": "centered",
+    "avoid": []
+  },
+  {
+    "subject": "robotic manipulator grasping a glowing sphere",
+    "setting": "black background with electric blue accents",
+    "style": "3D render",
+    "lighting": "electric blue sphere glow",
+    "palette": ["black", "blue"],
+    "composition": "close-up",
+    "avoid": []
+  },
+  {
+    "subject": "robotic forklift among rows of shelving",
+    "setting": "automated warehouse with storage racks",
+    "style": "isometric 3D render",
+    "lighting": "even industrial lighting",
+    "palette": ["gray", "orange"],
+    "composition": "rule of thirds",
+    "avoid": []
+  }
+]
+```

@@ -1,0 +1,275 @@
+{
+ "zero": {
+  "k1": 1.0,
+  "k2": 1.0,
+  "k3": 1.0,
+  "k4": 0.8666666666666667,
+  "each": [
+   {
+    "file": "answers/ctx1_zero_r1.txt",
+    "sha256": "0a7fc1043edea4b8a8b8946de56be2986aa6a787a056c9fd3f3e5494345ee078",
+    "parsed": true,
+    "fenced": true,
+    "n": 5,
+    "k1": 1.0,
+    "k2": 1.0,
+    "k3": 1.0,
+    "errors": []
+   },
+   {
+    "file": "answers/ctx1_zero_r2.txt",
+    "sha256": "15f4263287cf5312d2b6019168137137515f8d9f520b510a75df236a31087369",
+    "parsed": true,
+    "fenced": true,
+    "n": 5,
+    "k1": 1.0,
+    "k2": 1.0,
+    "k3": 1.0,
+    "errors": []
+   },
+   {
+    "file": "answers/ctx1_zero_r3.txt",
+    "sha256": "b895a626957785c07299edd66a05b2ff69d6d4b8d8c7d0416e8eac87f68b3581",
+    "parsed": true,
+    "fenced": true,
+    "n": 5,
+    "k1": 1.0,
+    "k2": 1.0,
+    "k3": 1.0,
+    "errors": []
+   }
+  ],
+  "choices": {
+   "style": [
+    [
+     "3D render",
+     "photorealistic",
+     "3D render",
+     "3D render",
+     "isometric 3D render"
+    ],
+    [
+     "3D render",
+     "3D render",
+     "3D render",
+     "3D render",
+     "isometric 3D render"
+    ],
+    [
+     "3D render",
+     "3D render",
+     "3D render",
+     "3D render",
+     "isometric 3D render"
+    ]
+   ],
+   "composition": [
+    [
+     "centered",
+     "wide negative space",
+     "centered",
+     "close-up",
+     "centered"
+    ],
+    [
+     "centered",
+     "wide negative space",
+     "centered",
+     "close-up",
+     "rule of thirds"
+    ],
+    [
+     "centered",
+     "wide negative space",
+     "centered",
+     "close-up",
+     "rule of thirds"
+    ]
+   ]
+  },
+  "k4_style": 0.8666666666666667,
+  "k4_composition": 0.8666666666666667
+ },
+ "few": {
+  "k1": 1.0,
+  "k2": 1.0,
+  "k3": 1.0,
+  "k4": 0.9333333333333333,
+  "each": [
+   {
+    "file": "answers/ctx1_few_r1.txt",
+    "sha256": "bd62c8ab134228d20106f8a3f65bbdfd3f3b2bf683379fff1a8db2c1d11d6f39",
+    "parsed": true,
+    "fenced": true,
+    "n": 5,
+    "k1": 1.0,
+    "k2": 1.0,
+    "k3": 1.0,
+    "errors": []
+   },
+   {
+    "file": "answers/ctx1_few_r2.txt",
+    "sha256": "a70c8cc065c57b1c10acca12ddc31fcc5f516b1f66f146fc5098c7e44e710bf9",
+    "parsed": true,
+    "fenced": true,
+    "n": 5,
+    "k1": 1.0,
+    "k2": 1.0,
+    "k3": 1.0,
+    "errors": []
+   },
+   {
+    "file": "answers/ctx1_few_r3.txt",
+    "sha256": "46aaa092566e40bd9d29a6405fc9059aea9bd4a33ee032dd919dd52f7bff5368",
+    "parsed": true,
+    "fenced": true,
+    "n": 5,
+    "k1": 1.0,
+    "k2": 1.0,
+    "k3": 1.0,
+    "errors": []
+   }
+  ],
+  "choices": {
+   "style": [
+    [
+     "3D render",
+     "3D render",
+     "3D render",
+     "3D render",
+     "isometric 3D render"
+    ],
+    [
+     "3D render",
+     "3D render",
+     "3D render",
+     "3D render",
+     "isometric 3D render"
+    ],
+    [
+     "3D render",
+     "3D render",
+     "3D render",
+     "3D render",
+     "isometric 3D render"
+    ]
+   ],
+   "composition": [
+    [
+     "centered",
+     "wide negative space",
+     "centered",
+     "close-up",
+     "rule of thirds"
+    ],
+    [
+     "centered",
+     "wide negative space",
+     "centered",
+     "close-up",
+     "wide negative space"
+    ],
+    [
+     "centered",
+     "wide negative space",
+     "centered",
+     "close-up",
+     "wide negative space"
+    ]
+   ]
+  },
+  "k4_style": 1.0,
+  "k4_composition": 0.8666666666666667
+ },
+ "step": {
+  "k1": 1.0,
+  "k2": 1.0,
+  "k3": 1.0,
+  "k4": 0.8666666666666667,
+  "each": [
+   {
+    "file": "answers/ctx1_step_r1.txt",
+    "sha256": "7e5ecc3eaa87b2599775c922ec6b32752843e0a00827b601347bd9a6bd0cabac",
+    "parsed": true,
+    "fenced": true,
+    "n": 5,
+    "k1": 1.0,
+    "k2": 1.0,
+    "k3": 1.0,
+    "errors": []
+   },
+   {
+    "file": "answers/ctx1_step_r2.txt",
+    "sha256": "2d4d314e31171d233dca32202075c2b0b5dfbef8fccbf7840edf8ce392b37c0f",
+    "parsed": true,
+    "fenced": true,
+    "n": 5,
+    "k1": 1.0,
+    "k2": 1.0,
+    "k3": 1.0,
+    "errors": []
+   },
+   {
+    "file": "answers/ctx1_step_r3.txt",
+    "sha256": "e976cb73915b4f77f751d38ed7e88623be1a98ae4286e55d964f78398d5048d5",
+    "parsed": true,
+    "fenced": true,
+    "n": 5,
+    "k1": 1.0,
+    "k2": 1.0,
+    "k3": 1.0,
+    "errors": []
+   }
+  ],
+  "choices": {
+   "style": [
+    [
+     "3D render",
+     "3D render",
+     "flat vector illustration",
+     "3D render",
+     "isometric 3D render"
+    ],
+    [
+     "3D render",
+     "3D render",
+     "3D render",
+     "3D render",
+     "isometric 3D render"
+    ],
+    [
+     "3D render",
+     "3D render",
+     "flat vector illustration",
+     "3D render",
+     "isometric 3D render"
+    ]
+   ],
+   "composition": [
+    [
+     "centered",
+     "wide negative space",
+     "centered",
+     "close-up",
+     "wide negative space"
+    ],
+    [
+     "centered",
+     "wide negative space",
+     "centered",
+     "close-up",
+     "rule of thirds"
+    ],
+    [
+     "centered",
+     "wide negative space",
+     "centered",
+     "close-up",
+     "wide negative space"
+    ]
+   ]
+  },
+  "k4_style": 0.8666666666666667,
+  "k4_composition": 0.8666666666666667
+ }
+}

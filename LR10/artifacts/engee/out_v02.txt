@@ -1,0 +1,44 @@
+Среда: {"date_utc": "2026-11-02 20:05:04", "python": "3.11.11", "torch": "2.4.1+cpu", "diffusers": "0.32.2", "transformers": "4.57.6", "numpy": "2.1.3", "scipy": "1.15.2", "pillow": "11.1.0", "huggingface_hub": "0.36.2", "cuda": false, "torch_threads": 4, "cpu": "Intel(R) Xeon(R) Platinum 8180 CPU @ 2.50GHz", "cpu_count": 112, "clip": "openai/clip-vit-large-patch14", "clip_revision": "32bd64288804d66eefd0ccbe215aa642df71cc41", "seeds": [101, 102, 103, 104, 105], "models": {"turbo": {"repo": "stabilityai/sd-turbo", "revision": "b261bac6fd2cf515557d5d0707481eafa0485ec2", "steps": 1, "guidance": 0.0, "size": 512, "note": "дистиллированная SD 2.1, 1 шаг, без управления"}, "bk": {"repo": "nota-ai/bk-sdm-tiny", "revision": "0364108e53b7f7f4d2585e817a0b7a83dc261cfa", "steps": 10, "guidance": 7.5, "size": 512, "scheduler": "dpm", "note": "облегчённая SD 1.x, DPM-Solver++, 10 шагов"}}}
+Вариант 2: бриф 1, пара 2: A = turbo, B = bk
+бриф: 'editorial poster concept for a robotics festival, glowing mechanical arm silhouette, deep blue and amber palette, clean composition, no text, no logo, no people'
+загрузка turbo: 1.5 с; планировщик EulerDiscreteScheduler
+  turbo seed 101: clip_brief 24.46  clip_text 12.10  edge 0.0499  contrast 0.1701  18.8 с
+  turbo seed 102: clip_brief 26.13  clip_text 12.81  edge 0.0511  contrast 0.1712  18.3 с
+  turbo seed 103: clip_brief 24.21  clip_text 13.19  edge 0.0583  contrast 0.1618  18.4 с
+  turbo seed 104: clip_brief 25.53  clip_text 10.88  edge 0.0491  contrast 0.1672  18.4 с
+  turbo seed 105: clip_brief 25.50  clip_text 13.01  edge 0.0550  contrast 0.2049  19.1 с
+загрузка bk: 28.0 с; планировщик DPMSolverMultistepScheduler
+  bk seed 101: clip_brief 24.01  clip_text 14.72  edge 0.0088  contrast 0.1473  60.2 с
+  bk seed 102: clip_brief 31.84  clip_text 14.39  edge 0.0126  contrast 0.1216  68.1 с
+  bk seed 103: clip_brief 28.43  clip_text 12.85  edge 0.0270  contrast 0.1228  62.3 с
+  bk seed 104: clip_brief 26.42  clip_text 14.32  edge 0.0120  contrast 0.1533  63.7 с
+  bk seed 105: clip_brief 26.81  clip_text 13.48  edge 0.0116  contrast 0.1419  61.8 с
+variant_summary: 555.4 с (CLIP, две загрузки, два прогрева, 10 изображений)
+листы слепого сравнения: ['blind_101.png', 'blind_102.png', 'blind_103.png', 'blind_104.png', 'blind_105.png']
+
+Сводка variant_summary (как в указаниях):
+метрика              A        s         B         Δ   |Δ|/s  |Δ|>2s
+clip_brief       25.17     0.80     27.50     +2.34     2.9  да
+clip_text        12.40     0.94     13.95     +1.56     1.7  нет
+edge            0.0527   0.0039    0.0144   -0.0383     9.9  да
+contrast        0.1750   0.0171    0.1374   -0.0376     2.2  да
+seconds          18.59     0.34     63.22    +44.63   133.2  да
+
+Пересчёт сводки по записанным значениям совпал с variant_summary: True
+отношение времён B/A: 3.40
+
+По seed (clip_brief):
+seed      101      102      103      104      105
+A       24.46    26.13    24.21    25.53    25.50
+B       24.01    31.84    28.43    26.42    26.81
+B − A   -0.44    +5.71    +4.22    +0.89    +1.32
+
+Сверка модели A с демонстрационным вариантом 1 (таблицы 6.3):
+  clip_brief  мой 25.17 (s 0.80)  демо 25.17 (s 0.80)  совпало: True
+  clip_text   мой 12.40 (s 0.94)  демо 12.40 (s 0.94)  совпало: True
+  edge        мой 0.0527 (s 0.0039)  демо 0.0527 (s 0.0039)  совпало: True
+  contrast    мой 0.1750 (s 0.0171)  демо 0.1750 (s 0.0171)  совпало: True
+  clip_brief по seed: мой [24.46, 26.13, 24.21, 25.53, 25.5]  демо [24.46, 26.13, 24.21, 25.53, 25.5]  совпало: True
+
+пик памяти процесса: 7.5 ГБ
+записано: results_v02.json, изображения и листы слепого сравнения в v02

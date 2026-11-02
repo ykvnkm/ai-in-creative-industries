@@ -21,7 +21,9 @@ pipi(args...) = run(pipeline(`$PY -m pip install --progress-bar off $args`; stdi
 has("torch") || (println("ставлю torch 2.4.1 (CPU)"); pipi("torch==2.4.1", "--index-url", "https://download.pytorch.org/whl/cpu"))
 has("scipy") || (println("ставлю scipy"); pipi("scipy"))
 ver = read(ignorestatus(`$PY -c "import diffusers, transformers; print(diffusers.__version__, transformers.__version__)"`), String)
-startswith(ver, "0.32.2 4.") || (println("ставлю diffusers==0.32.2, transformers<5"); pipi("diffusers==0.32.2", "transformers<5"))
+# Команда указаний ("transformers<5") не обновляет уже стоящую версию 4.x (в окружении была 4.48.3), поэтому
+# ставится проверенная указаниями 4.57.6.
+startswith(ver, "0.32.2 4.57.") || (println("ставлю diffusers==0.32.2, transformers==4.57.6"); pipi("diffusers==0.32.2", "transformers==4.57.6"))
 run(`$PY -c "import sys, torch, diffusers, transformers, scipy, numpy; print('python', sys.version.split()[0], '| torch', torch.__version__, '| diffusers', diffusers.__version__, '| transformers', transformers.__version__, '| scipy', scipy.__version__, '| numpy', numpy.__version__, '| cuda', torch.cuda.is_available())"`)
 
 # %% Шаги 4–6 плана. Вариант 2: серия A и B на seed 101…105, сводка, проверки. Запуск блокирующий
